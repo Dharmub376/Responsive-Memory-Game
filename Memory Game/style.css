@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 120px); /* Increased card size */
+    gap: 10px;
+    max-width: 500px; /* Adjusted container size */
+  }
+  
+  .card {
+    width: 120px; /* Increased card size */
+    height: 120px; /* Increased card size */
+    background-color: #3498db;
+    color: #fff;
+    font-size: 36px; /* Increased font size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card.flipped {
+    background-color: #2ecc71;
+  }
+  
+  .card.matched {
+    background-color: #3498db; /* Matched cards will have the original background color */
+    pointer-events: none;
+    color: #fff; /* Text color on matched cards */
+    font-size: 36px; /* Increased font size on matched cards */
+  }
+  
